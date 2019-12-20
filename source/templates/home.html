@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Ammar's Strong Password Generator</a>
+    </nav>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col">
+                <h4>Type the password length : </h4>
+                <form action="/" method="POST" class="form-inline">
+                    <input type="text" name="content" class="form-control mb-2 mr-sm-2" placeholder="Type here..">
+                    <button type="submit" class="btn btn-success mb-2">Generate</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <h5>Your Password is :</h5>
+            <div class="col">
+                <ul class="list-group">
+                    {% for password in passwords %}
+                    {{password}}
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
